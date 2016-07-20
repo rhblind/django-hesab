@@ -69,6 +69,19 @@ ES_BACKEND_SETTINGS = {
 
 ```python
 #
+# settings.py
+#
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'hesab.backends.ElasticsearchSearchEngine',
+        'URL': 'http://localhost:9200/',
+        'INDEX_NAME': 'hesab-test',
+        'TIMEOUT': 300
+    }
+}
+
+
+#
 # search_indexes.py
 #
 
