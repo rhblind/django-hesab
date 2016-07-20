@@ -1,0 +1,7 @@
+Django>=1.8.0
+coverage
+django-haystack>=2.5.dev1
+elasticsearch<2.0.0
+nose
+tox
+unittest2
