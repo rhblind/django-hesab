@@ -2,6 +2,10 @@
 
 Custom Elasticsearch backend for django-haystack which makes it easier to customize 
 Elasticsearch backend settings.
+
+[![Build Status](https://travis-ci.org/rhblind/django-hesab.svg?branch=master)](https://travis-ci.org/rhblind/django-hesab)
+[![Coverage Status](https://coveralls.io/repos/github/rhblind/django-hesab/badge.svg?branch=master)](https://coveralls.io/github/rhblind/django-hesab?branch=master)
+
  
 ## Why?
 I find myself having to subclass and customize the Elasticsearch backend in Haystack for
