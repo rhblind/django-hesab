@@ -15,7 +15,7 @@ $ pip install django-hesab
  
 ## Why?
 I find myself having to subclass and customize the Elasticsearch backend in Haystack for
-almost every single project I'm using it in. Specially, the autocomplete functionality bothers
+almost every single project I'm using it in. Specially, the autocomplete functionality bothered
 me, and I struggled to figure out why it didn't "feel" like autocomplete. Well, it's because it really
 isn't. The EdgeNGram analyzer does what it should, but to make it "feel" a bit more natural 
 there's some tweaking that has to be done.
@@ -38,7 +38,7 @@ ES_BACKEND_SETTINGS = {
     'INDEX_SETTINGS: {
         'settings: {
             'number_of_shards': 2,
-            analysis: {
+            'analysis': {
                 'analyzer': {
                     'my_analyzer': {
                         'type': 'custom',
