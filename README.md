@@ -6,6 +6,12 @@ Elasticsearch backend settings.
 [![Build Status](https://travis-ci.org/rhblind/django-hesab.svg?branch=master)](https://travis-ci.org/rhblind/django-hesab)
 [![Coverage Status](https://coveralls.io/repos/github/rhblind/django-hesab/badge.svg?branch=master)](https://coveralls.io/github/rhblind/django-hesab?branch=master)
 
+
+### Install
+
+```
+$ pip install django-hesab
+```
  
 ## Why?
 I find myself having to subclass and customize the Elasticsearch backend in Haystack for
@@ -24,6 +30,8 @@ So I have simply packaged up what I've got for others to use...
 
 Simply use the default tweaks shipped in this package, or write your own.
 Declare it in `settings.py` under the `ES_BACKEND_SETTINGS` namespace like this:
+
+If you don't need to do any special configuration, simply ignore this.
 
 ```python
 ES_BACKEND_SETTINGS = {
