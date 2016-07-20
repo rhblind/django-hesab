@@ -53,9 +53,6 @@ ES_BACKEND_SETTINGS = {
 }
 ```
 
-You don't have to write the whole structure, it will be recursively applied to the `DEFAULT_SETTINGS`.
- 
-
 ### Start using it
 
 ```python
