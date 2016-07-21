@@ -47,6 +47,10 @@ coverage.xml
 *,cover
 .hypothesis/
 
+# Databases
+*.db
+*.sqlite3
+
 # Translations
 *.mo
 *.pot
