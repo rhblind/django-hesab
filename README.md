@@ -84,7 +84,6 @@ HAYSTACK_CONNECTIONS = {
 #
 # search_indexes.py
 #
-
 from haystack import indexes
 from hesab.fields import AutocompleteEdgeNgramField
 

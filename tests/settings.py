@@ -19,6 +19,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'haystack',
+    'tests.testapp'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -91,3 +94,32 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+    },
+    'handlers': {
+        'console_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        },
+    },
+    'loggers': {
+        'elasticsearch': {
+            'handlers': ['console_handler'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        'elasticsearch.trace': {
+            'handlers': ['console_handler'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}
