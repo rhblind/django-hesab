@@ -97,7 +97,7 @@ class MySearchIndex(indexes.SearchIndex, indexes.Indexable):
         
     @staticmethod
     def prepare_autocomplete(obj):
-        autocomplete " ".join((obj.street_address, obj.city, obj.zip_code))
+        autocomplete = " ".join((obj.street_address, obj.city, obj.zip_code))
         return " ".join(set(autocomplete.split()))
 
 
