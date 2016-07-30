@@ -18,10 +18,6 @@ class AutocompleteQueryTestCase(TestCase):
         PersonIndex().reindex()
         self.sqs = SearchQuerySet().all()
 
-    def tearDown(self):
-        # PersonIndex().clear()
-        pass
-
     def test_filter_CharField(self):
         # Make sure we only get exact hit when searching using
         # the `CharField` fields

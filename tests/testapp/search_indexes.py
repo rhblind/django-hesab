@@ -4,7 +4,6 @@ from __future__ import absolute_import, unicode_literals
 
 from haystack import indexes
 from tests.testapp.models import Person
-
 from hesab.fields import AutocompleteEdgeNgramField
 
 
