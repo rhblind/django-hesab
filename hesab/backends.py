@@ -2,37 +2,13 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from copy import deepcopy
-from django.utils import six
-
 from haystack.backends.elasticsearch_backend import (
     FIELD_MAPPINGS,
     ElasticsearchSearchBackend as _ElasticsearchSearchBackend,
     ElasticsearchSearchEngine as _ElasticsearchSearchEngine
 )
-
 from hesab.settings import es_settings
-
-
-def merge_dict(a, b):
-    """
-    Recursively merges and returns dict a with dict b.
-    :param a: dictionary object
-    :param b: dictionary object
-    :return: merged dictionary object
-    """
-
-    if not isinstance(b, dict):
-        return b
-
-    result = deepcopy(a)
-    for key, val in six.iteritems(b):
-        if key in result and isinstance(result[key], dict):
-            result[key] = merge_dict(result[key], val)
-        else:
-            result[key] = deepcopy(val)
-
-    return result
+from hesab.utils import merge_dict
 
 
 class ElasticsearchSearchBackend(_ElasticsearchSearchBackend):
