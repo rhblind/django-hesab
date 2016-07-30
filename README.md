@@ -24,8 +24,6 @@ there's some tweaking that has to be done.
 2. Create an analyzer that use the filter
 3. Create a field mappings that use the new analyzer to index, and the standard analyzer to search.
 
-So I have simply packaged up what I've got for others to use...
-
 ## How?
 
 Simply use the default tweaks shipped in this package, or write your own.
@@ -75,7 +73,7 @@ HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'hesab.backends.ElasticsearchSearchEngine',
         'URL': 'http://localhost:9200/',
-        'INDEX_NAME': 'hesab-test',
+        'INDEX_NAME': 'my-index',
         'TIMEOUT': 300
     }
 }
@@ -99,6 +97,4 @@ class MySearchIndex(indexes.SearchIndex, indexes.Indexable):
     def prepare_autocomplete(obj):
         autocomplete = " ".join((obj.street_address, obj.city, obj.zip_code))
         return " ".join(set(autocomplete.split()))
-
-
 ```
